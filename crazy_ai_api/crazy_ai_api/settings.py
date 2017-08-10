@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'modules.twitter',
     'rest_framework',
+    'modules.watson',
 ]
 
 MIDDLEWARE = [
