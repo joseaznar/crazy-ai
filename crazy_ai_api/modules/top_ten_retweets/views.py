@@ -10,10 +10,10 @@ from twitter import TwitterError
 # Create your views here.
 
 
-class ListTopTenReTweets(APIView):
+class ListTopReTweets(APIView):
 
     def get(self, request, query):
-        # http://127.0.0.1:8000/api/v1/tweets/(thing to look for)/
+        # http://127.0.0.1:8000/api/v1/top-ret/(thing to look for)/
         api = twitter.Api(
             base_url='https://api.twitter.com/1.1',
             consumer_key='QmMcxaV3mA4pkxiUFtCk5gu85',
@@ -29,10 +29,6 @@ class ListTopTenReTweets(APIView):
         for stat in results:
             data.append(stat._json)
 
-        #top_values = {}
-        #min_value = 0
-        # for dat in data:
-        #	if dat['retweet_count'] > min_value:
 
         sorted_data = sorted(data, key=lambda k: k[
                              'retweet_count'], reverse=True)
