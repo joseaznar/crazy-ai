@@ -14,7 +14,7 @@ from watson_developer_cloud import ToneAnalyzerV3
 class ProcessTweets(APIView):
 
     def get(self, request, query):
-        # http://127.0.0.1:8000/api/v1/tweets/(thing to look for)/
+        # http://127.0.0.1:8000/api/v1/watson/(thing to look for)/
         api = twitter.Api(
             base_url='https://api.twitter.com/1.1',
             consumer_key='QmMcxaV3mA4pkxiUFtCk5gu85',

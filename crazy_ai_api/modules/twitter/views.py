@@ -27,9 +27,9 @@ class ListTweets(APIView):
         results = api.GetSearch(
             raw_query="q=" + query)
 
-        data = []
+        data = {}
         for stat in results:
-            data.append(stat._json)
+            data.update(stat._json)
 
         return Response(data, status=status.HTTP_200_OK)
         # return Response(results[0]._json,status=status.HTTP_200_OK)
