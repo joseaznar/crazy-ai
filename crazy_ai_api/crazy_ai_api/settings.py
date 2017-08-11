@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'modules.twitter',
     'rest_framework',
     'modules.watson',
+    'modules.top_ten_retweets',
 ]
 
 MIDDLEWARE = [
