@@ -4,35 +4,55 @@
 {% block content %}
      <div class="carousel carousel-slider center" data-indicators="true">
     <div class="carousel-fixed-item center">
-      <a class="btn btn-info">Analyze</a>
+       <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Analiza</a>
     </div>
 
-    <div class="carousel-item red white-text" href="#one!" style="background-image: url(https://lorempixel.com/580/250/nature/1); background-size: 100% 100%; ">
-      
-      <h2>Entiendo los que tus usuarios te estan diciendo</h2>
-      <p class="white-text">This is your first panel</p>
+    <div class="carousel-item red white-text" href="#one!" style="background-image: url(     https://user-images.githubusercontent.com/26099630/29296597-f8daffd8-8120-11e7-9ac7-0a6600250309.png); background-size: 100% 100%; ">
+ 
+      <h2>Analiza en tiempo real lo que tus usuarios o clientes te estan diciendo</h2>
+      <p class="white-text"></p>
 
     </div>
-    <div class="carousel-item amber white-text" href="#two!">
-      <h2>Haz una analizis de lo que se dice en las redes sociales en tiempo real</h2>
-      <p class="white-text">This is your second panel</p>
+    <div class="carousel-item amber white-text" href="#two!" style = "background-image: url(https://user-images.githubusercontent.com/26099630/29296715-baf5238c-8121-11e7-9d03-0f67d245f1db.jpg); background-size: 100% 100%; ">
+">
+      <h2>Toma mejores decisiones para incrementar tus ventas</h2>
+      <p class="white-text"></p>
     </div>
-    <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
+    <div class="carousel-item green white-text" href="#three!" style = "background-image: url(https://user-images.githubusercontent.com/26099630/29296909-d860c72c-8122-11e7-9e87-d11a0c1c012f.png); background-size: 100% 100%; ">
+      <h2>Analiza tus campañas de marketing a un costo accesible</h2>
+      <p class="white-text">Ahorra dinero</p>
     </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
+    <div class="carousel-item blue white-text" href="#four!" style = "background-image: url(https://user-images.githubusercontent.com/26099630/29296689-800b6060-8121-11e7-97d7-8eacabbcb25a.jpg); background-size: 100% 100%; ">
+); background-size: 100% 100%; ">
+      <h2>Análisis con inteligencia articial</h2>
+      <p class="black-text">Powered by Watson</p>
     </div>
   </div>
       
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Análisis</h4>
+      <p>Ingresa los parámetros</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Analiza</a>
+    </div>
+  </div>
+
 {% endblock %}
 
 {% block js %}
 
 <script type="text/javascript"> 
   $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+    $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+          
 </script>      
 
 {% endblock %}
